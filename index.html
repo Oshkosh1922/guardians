@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians Project</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="content">
+        <!-- Countdown display -->
+        <div id="countdown" style="text-align: center; margin-bottom: 20px; font-size: 20px;"></div>
+        
+        <form id="submissionForm" action="https://formspree.io/f/mnqezodr" method="POST" class="input-container">
+            <input type="text" name="ordinalAddress" placeholder="Enter your Ordinals address" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('submissionForm').addEventListener('submit', function(event) {
+            // The form is submitted only if it passes HTML5 validation (e.g., the "required" check)
+            // Formspree should not complain about an empty form due to the "required" attribute
+        });
+    </script>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            // Get the value from the input
+            var ordinalAddress = document.getElementById('ordinalAddress').value;
+    
+            // TODO: Implement your submission logic here
+            console.log("Submitted Ordinals Address: " + ordinalAddress);
+    
+            // Example: Add more complex animations or handle the data
+        });
+    </script>
+    <script>
+        // When the window finishes loading, clear the form
+        window.onload = function() {
+            document.getElementById('submissionForm').reset();
+        };
+    </script>
+    <script>
+        // Function to update the countdown
+        function updateCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            const targetDate = new Date('March 29, 2024 00:00:00').getTime(); // Target date and time
+            const now = new Date().getTime(); // Current time
+            const difference = targetDate - now; // Difference in milliseconds
+    
+            // Time calculations
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    
+            // Update the countdown display
+            countdownElement.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    
+            // When the countdown is over, display a message
+            if (difference < 0) {
+                clearInterval(interval);
+                countdownElement.innerHTML = "The countdown has ended!";
+            }
+        }
+    
+        // Update the countdown every second
+        const interval = setInterval(updateCountdown, 1000);
+    
+        // Clear the form on page load
+        window.onload = function() {
+            document.getElementById('submissionForm').reset();
+        };
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* Base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Default background for desktop */
+body {
+    background-image: url('../images/bg.png'); /* Adjust path as needed */
+    background-position: center center;
+    background-size: cover; /* Cover the entire page */
+    background-attachment: fixed; /* Fixed background */
+}
+
+/* Content styles */
+.content {
+    width: 100%; /* Takes the full width of the viewport */
+    max-width: 600px; /* Maximum width of the content */
+    margin: auto; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Takes the full viewport height */
+    padding: 20px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    body {
+        background-image: url('../images/mbg.png'); /* Adjust path as needed for mobile background */
+    }
+}
+/* Additional styles for input container */
+.input-container {
+    width: 77%; /* Match width of countdown for alignment */
+    max-width: 600px; /* Maximum width, adjust as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+input[type="text"] {
+    padding: 10px 10px;
+    width: 100%; /* Makes the input box narrower */
+    max-width: 300px; /* Adjust this value to set how narrow the input should be */
+    margin: 10px auto 20px;     /* Center the input box horizontally */
+    border: 6px solid #edd6ff;
+    border-radius: 30px;
+}
+
+button {
+    padding: 3px 15px;
+    margin-bottom: 300px;
+    margin-left: 120px;
+    border: none;
+    border-radius: 8px;
+    background-color: #9A7DFF;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px #7661ca;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #8f6bff;
+}
+
+button:active {
+    box-shadow: 0 2px #7661ca;
+    transform: translateY(2px);
+}
+/* Add to your styles/styles.css file */
+#countdown {
+    text-align: center;
+    margin-right:5px;
+    margin-bottom: 20px; /* Adjust if more space is needed */
+    font-size: 10px;
+     /* Light background for visibility */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    width: 80%; /* Full width of the content container */
+    max-width: 350px; /* Maximum width, adjust as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
