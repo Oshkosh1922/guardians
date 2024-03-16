@@ -37,10 +37,10 @@ body {
 
 /* Additional styles for input container */
 .input-container {
-    width: 100%; /* Center the input container */
-    max-width: 600px;/* Maximum width, adjust as needed */
-    box-sizing: border-box; 
-    margin: 0 auto;/* Include padding and border in the element's total width */
+    width: 90%; /* Adjust width for better centering */
+    max-width: 600px; /* Maximum width, adjust as needed */
+    box-sizing: border-box;
+    margin: 0 auto; /* Center horizontally */
 }
 
 input[type="text"] {
@@ -84,6 +84,11 @@ button:active {
     max-width: 350px; /* Maximum width, adjust as needed */
     box-sizing: border-box; /* Include padding and border in the element's total width */
     margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .input-container {
+        width: 95%; /* Adjust width for better centering on mobile */
+    }
 }
 
 
