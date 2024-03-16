@@ -37,8 +37,9 @@ body {
 /* Additional styles for input container */
 .input-container {
     width: 77%; /* Match width of countdown for alignment */
-    max-width: 600px; /* Maximum width, adjust as needed */
-    box-sizing: border-box; /* Include padding and border in the element's total width */
+    max-width: 600px;/* Maximum width, adjust as needed */
+    box-sizing: border-box; 
+    margin: 0 auto;/* Include padding and border in the element's total width */
 }
 
 input[type="text"] {
@@ -53,7 +54,7 @@ input[type="text"] {
 button {
     padding: 3px 15px;
     margin-bottom: 300px;
-    margin-left: 120px;
+    margin-left: 140px;
     border: none;
     border-radius: 8px;
     background-color: #9A7DFF;
@@ -84,5 +85,6 @@ button:active {
     width: 80%; /* Full width of the content container */
     max-width: 350px; /* Maximum width, adjust as needed */
     box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin: 0 auto;
 }
 
