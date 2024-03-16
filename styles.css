@@ -33,11 +33,14 @@ body {
     body {
         background-image: url('../images/mbg.png'); /* Adjust path as needed for mobile background */
     }
+        .input-container {
+        width: 95%; /* Adjust width for better centering on mobile */
+    }
 }
 
 /* Additional styles for input container */
 .input-container {
-    width: 90%; /* Adjust width for better centering */
+    width: 80%; /* Adjust width for better centering */
     max-width: 600px; /* Maximum width, adjust as needed */
     box-sizing: border-box;
     margin: 0 auto; /* Center horizontally */
@@ -85,10 +88,6 @@ button:active {
     box-sizing: border-box; /* Include padding and border in the element's total width */
     margin: 0 auto;
 }
-@media (max-width: 768px) {
-    .input-container {
-        width: 95%; /* Adjust width for better centering on mobile */
-    }
-}
+
 
 
