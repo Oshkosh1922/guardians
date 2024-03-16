@@ -34,9 +34,10 @@ body {
         background-image: url('../images/mbg.png'); /* Adjust path as needed for mobile background */
     }
 }
+
 /* Additional styles for input container */
 .input-container {
-    width: 77%; /* Match width of countdown for alignment */
+    width: 100%; /* Center the input container */
     max-width: 600px;/* Maximum width, adjust as needed */
     box-sizing: border-box; 
     margin: 0 auto;/* Include padding and border in the element's total width */
@@ -44,17 +45,15 @@ body {
 
 input[type="text"] {
     padding: 10px 10px;
-    width: 100%; /* Makes the input box narrower */
+    width: 100%; /* Makes the input box full width */
     max-width: 300px; /* Adjust this value to set how narrow the input should be */
-    margin: 10px auto 20px;     /* Center the input box horizontally */
+    margin: 10px auto 20px; /* Center the input box horizontally */
     border: 6px solid #edd6ff;
     border-radius: 30px;
 }
 
 button {
     padding: 3px 15px;
-    margin-bottom: 300px;
-    margin-left: 140px;
     border: none;
     border-radius: 8px;
     background-color: #9A7DFF;
@@ -72,19 +71,19 @@ button:active {
     box-shadow: 0 2px #7661ca;
     transform: translateY(2px);
 }
-/* Add to your styles/styles.css file */
+
+/* Countdown styles */
 #countdown {
     text-align: center;
-    margin-right:5px;
     margin-bottom: 20px; /* Adjust if more space is needed */
     font-size: 10px;
-     /* Light background for visibility */
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
-    width: 80%; /* Full width of the content container */
+    width: 100%; /* Center the countdown box */
     max-width: 350px; /* Maximum width, adjust as needed */
     box-sizing: border-box; /* Include padding and border in the element's total width */
     margin: 0 auto;
 }
+
 
