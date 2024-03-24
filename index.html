@@ -7,50 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <div class="content">
-        <!-- Countdown display -->
-        <div id="countdown" style="text-align: center; margin-bottom: 20px; font-size: 20px;"></div>
-        
-        <form   class="input-container">
-            <input type="text" name="ordinalAddress" placeholder="Enter your Ordinals address" required>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
-
-
-    <script>
-        // Function to update the countdown
-        function updateCountdown() {
-            const countdownElement = document.getElementById('countdown');
-            const targetDate = new Date('March 29, 2024 00:00:00').getTime(); // Target date and time
-            const now = new Date().getTime(); // Current time
-            const difference = targetDate - now; // Difference in milliseconds
-    
-            // Time calculations
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    
-            // Update the countdown display
-            countdownElement.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
-    
-            // When the countdown is over, display a message
-            if (difference < 0) {
-                clearInterval(interval);
-                countdownElement.innerHTML = "The countdown has ended!";
-            }
-        }
-    
-        // Update the countdown every second
-        const interval = setInterval(updateCountdown, 1000);
-    
-        // Clear the form on page load
-        window.onload = function() {
-            document.getElementById('submissionForm').reset();
-        };
-    </script>
+<p> Phase 1 will continue from a 4 day countdown shortly</p>
     
 </body>
 </html>
